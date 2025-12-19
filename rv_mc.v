@@ -170,21 +170,22 @@ module fsm(
 );
 
     // FSM State Encoding
-    localparam S_FETCH      = 4'd0;
-    localparam S_DECODE     = 4'd1;
-    localparam S_MEM_ADDR   = 4'd2;
-    localparam S_MEM_RD     = 4'd3;
-    localparam S_WB_MEM     = 4'd4;
-    localparam S_MEM_WR     = 4'd5;
-    localparam S_EXE_R      = 4'd6;
-    localparam S_WB_ALU     = 4'd7;
-    localparam S_BEQ        = 4'd8;
-    localparam S_EXE_I      = 4'd9;
-    localparam S_JAL        = 4'd10;
-    localparam S_LUI        = 4'd11;
-    localparam S_JAL_WB     = 4'd12;
+    localparam [3:0] S_FETCH      = 4'd0;
+    localparam [3:0] S_DECODE     = 4'd1;
+    localparam [3:0] S_MEM_ADDR   = 4'd2;
+    localparam [3:0] S_MEM_RD     = 4'd3;
+    localparam [3:0] S_WB_MEM     = 4'd4;
+    localparam [3:0] S_MEM_WR     = 4'd5;
+    localparam [3:0] S_EXE_R      = 4'd6;
+    localparam [3:0] S_WB_ALU     = 4'd7;
+    localparam [3:0] S_BEQ        = 4'd8;
+    localparam [3:0] S_EXE_I      = 4'd9;
+    localparam [3:0] S_JAL        = 4'd10;
+    localparam [3:0] S_LUI        = 4'd11;
+    localparam [3:0] S_JAL_WB     = 4'd12;
 
-    reg [3:0] current_state, next_state;
+    reg [3:0] current_state;
+    reg [3:0] next_state;
 
     // --------------------------------------------------------------------------
     // FSM: State Transition
@@ -345,6 +346,8 @@ module fsm(
                 alu_op = 2'b00;        // Add
                 next_state = S_WB_ALU;
             end
+
+            default: next_state = S_FETCH;
         endcase
     end
 endmodule
