@@ -44,8 +44,8 @@ verilog xil_defaultlib --include "C:/Xilinx/Vivado/2021.2/data/xilinx_vip/includ
 "../../../bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/sim/ip_integrator_smartconnect_0_0.v" \
 "../../../bd/ip_integrator/ip/ip_integrator_blk_mem_gen_0_0/sim/ip_integrator_blk_mem_gen_0_0.v" \
 "../../../bd/ip_integrator/ip/ip_integrator_blk_mem_gen_0_1/sim/ip_integrator_blk_mem_gen_0_1.v" \
-"../../../bd/ip_integrator/ipshared/4897/rv-pl.v" \
-"../../../bd/ip_integrator/ip/ip_integrator_rv_pl_ip_0_0/sim/ip_integrator_rv_pl_ip_0_0.v" \
+"../../../bd/ip_integrator/ipshared/26dc/rv-sc-ip.v" \
+"../../../bd/ip_integrator/ip/ip_integrator_rv_sc_ip_0_0/sim/ip_integrator_rv_sc_ip_0_0.v" \
 "../../../bd/ip_integrator/sim/ip_integrator.v" \
 
 verilog xil_defaultlib "glbl.v"

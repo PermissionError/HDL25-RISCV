@@ -19,7 +19,7 @@
       "memgen_dram": "",
       "axi_gpio_0": "",
       "proc_sys_reset_0": "",
-      "rv_pl_ip_0": ""
+      "rv_sc_ip_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -493,11 +493,11 @@
         "xci_path": "ip\\ip_integrator_proc_sys_reset_0_0\\ip_integrator_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
       },
-      "rv_pl_ip_0": {
-        "vlnv": "xilinx.com:user:rv_pl_ip:1.0",
-        "xci_name": "ip_integrator_rv_pl_ip_0_0",
-        "xci_path": "ip\\ip_integrator_rv_pl_ip_0_0\\ip_integrator_rv_pl_ip_0_0.xci",
-        "inst_hier_path": "rv_pl_ip_0"
+      "rv_sc_ip_0": {
+        "vlnv": "xilinx.com:user:rv_sc_ip:1.0",
+        "xci_name": "ip_integrator_rv_sc_ip_0_0",
+        "xci_path": "ip\\ip_integrator_rv_sc_ip_0_0\\ip_integrator_rv_sc_ip_0_0.xci",
+        "inst_hier_path": "rv_sc_ip_0"
       }
     },
     "interface_nets": {
@@ -562,25 +562,25 @@
           "memgen_dram/clka",
           "proc_sys_reset_0/slowest_sync_clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "rv_pl_ip_0/clk"
+          "rv_sc_ip_0/clk"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_0/gpio_io_o",
-          "rv_pl_ip_0/resetn"
+          "rv_sc_ip_0/resetn"
         ]
       },
       "memgen_dram_doutb": {
         "ports": [
           "memgen_dram/doutb",
-          "rv_pl_ip_0/d_doutb"
+          "rv_sc_ip_0/d_doutb"
         ]
       },
       "memgen_iram_doutb": {
         "ports": [
           "memgen_iram/doutb",
-          "rv_pl_ip_0/i_doutb"
+          "rv_sc_ip_0/i_doutb"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -598,52 +598,64 @@
           "proc_sys_reset_0/ext_reset_in"
         ]
       },
-      "rv_pl_ip_0_d_addrb": {
+      "rv_sc_ip_0_d_addrb": {
         "ports": [
-          "rv_pl_ip_0/d_addrb",
+          "rv_sc_ip_0/d_addrb",
           "memgen_dram/addrb"
         ]
       },
-      "rv_pl_ip_0_d_clkb": {
+      "rv_sc_ip_0_d_clkb": {
         "ports": [
-          "rv_pl_ip_0/d_clkb",
+          "rv_sc_ip_0/d_clkb",
           "memgen_dram/clkb"
         ]
       },
-      "rv_pl_ip_0_d_dinb": {
+      "rv_sc_ip_0_d_dinb": {
         "ports": [
-          "rv_pl_ip_0/d_dinb",
+          "rv_sc_ip_0/d_dinb",
           "memgen_dram/dinb"
         ]
       },
-      "rv_pl_ip_0_d_enb": {
+      "rv_sc_ip_0_d_enb": {
         "ports": [
-          "rv_pl_ip_0/d_enb",
+          "rv_sc_ip_0/d_enb",
           "memgen_dram/enb"
         ]
       },
-      "rv_pl_ip_0_d_web": {
+      "rv_sc_ip_0_d_web": {
         "ports": [
-          "rv_pl_ip_0/d_web",
+          "rv_sc_ip_0/d_web",
           "memgen_dram/web"
         ]
       },
-      "rv_pl_ip_0_i_addrb": {
+      "rv_sc_ip_0_i_addrb": {
         "ports": [
-          "rv_pl_ip_0/i_addrb",
+          "rv_sc_ip_0/i_addrb",
           "memgen_iram/addrb"
         ]
       },
-      "rv_pl_ip_0_i_clkb": {
+      "rv_sc_ip_0_i_clkb": {
         "ports": [
-          "rv_pl_ip_0/i_clkb",
+          "rv_sc_ip_0/i_clkb",
           "memgen_iram/clkb"
         ]
       },
-      "rv_pl_ip_0_i_enb": {
+      "rv_sc_ip_0_i_dinb": {
         "ports": [
-          "rv_pl_ip_0/i_enb",
+          "rv_sc_ip_0/i_dinb",
+          "memgen_iram/dinb"
+        ]
+      },
+      "rv_sc_ip_0_i_enb": {
+        "ports": [
+          "rv_sc_ip_0/i_enb",
           "memgen_iram/enb"
+        ]
+      },
+      "rv_sc_ip_0_i_web": {
+        "ports": [
+          "rv_sc_ip_0/i_web",
+          "memgen_iram/web"
         ]
       }
     },

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1771609093" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ip_integrator_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1771622258" LaunchIncrCheckpoint="$PPRDIR/../hdl_group_project/hdl_group_project.srcs/utils_1/imports/synth_1/ip_integrator_wrapper.dcp">
   <File Type="PA-TCL" Name="ip_integrator_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ip_integrator_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ip_integrator_wrapper_reports.tcl"/>
@@ -40,6 +40,14 @@
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
     <File Path="$PSRCDIR/utils_1/imports/synth_1/ip_integrator_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../hdl_group_project/hdl_group_project.srcs/utils_1/imports/synth_1/ip_integrator_wrapper.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

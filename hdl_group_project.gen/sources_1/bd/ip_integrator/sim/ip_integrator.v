@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Fri Feb 20 06:34:36 2026
+//Date        : Fri Feb 20 22:17:14 2026
 //Host        : Rays-PC running 64-bit major release  (build 9200)
 //Command     : generate_target ip_integrator.bd
 //Design      : ip_integrator
@@ -131,14 +131,16 @@ module ip_integrator
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
-  wire [31:0]rv_pl_ip_0_d_addrb;
-  wire rv_pl_ip_0_d_clkb;
-  wire [31:0]rv_pl_ip_0_d_dinb;
-  wire rv_pl_ip_0_d_enb;
-  wire [3:0]rv_pl_ip_0_d_web;
-  wire [31:0]rv_pl_ip_0_i_addrb;
-  wire rv_pl_ip_0_i_clkb;
-  wire rv_pl_ip_0_i_enb;
+  wire [31:0]rv_sc_ip_0_d_addrb;
+  wire rv_sc_ip_0_d_clkb;
+  wire [31:0]rv_sc_ip_0_d_dinb;
+  wire rv_sc_ip_0_d_enb;
+  wire [3:0]rv_sc_ip_0_d_web;
+  wire [31:0]rv_sc_ip_0_i_addrb;
+  wire rv_sc_ip_0_i_clkb;
+  wire [31:0]rv_sc_ip_0_i_dinb;
+  wire rv_sc_ip_0_i_enb;
+  wire [3:0]rv_sc_ip_0_i_web;
   wire [12:0]smartconnect_0_M00_AXI_ARADDR;
   wire [1:0]smartconnect_0_M00_AXI_ARBURST;
   wire [3:0]smartconnect_0_M00_AXI_ARCACHE;
@@ -326,34 +328,34 @@ module ip_integrator
         .s_axi_wvalid(smartconnect_0_M00_AXI_WVALID));
   ip_integrator_blk_mem_gen_0_1 memgen_dram
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,bram_ctrl_dram_BRAM_PORTA_ADDR}),
-        .addrb(rv_pl_ip_0_d_addrb),
+        .addrb(rv_sc_ip_0_d_addrb),
         .clka(Net),
-        .clkb(rv_pl_ip_0_d_clkb),
+        .clkb(rv_sc_ip_0_d_clkb),
         .dina(bram_ctrl_dram_BRAM_PORTA_DIN),
-        .dinb(rv_pl_ip_0_d_dinb),
+        .dinb(rv_sc_ip_0_d_dinb),
         .douta(bram_ctrl_dram_BRAM_PORTA_DOUT),
         .doutb(memgen_dram_doutb),
         .ena(bram_ctrl_dram_BRAM_PORTA_EN),
-        .enb(rv_pl_ip_0_d_enb),
+        .enb(rv_sc_ip_0_d_enb),
         .rsta(bram_ctrl_dram_BRAM_PORTA_RST),
         .rstb(1'b0),
         .wea(bram_ctrl_dram_BRAM_PORTA_WE),
-        .web(rv_pl_ip_0_d_web));
+        .web(rv_sc_ip_0_d_web));
   ip_integrator_blk_mem_gen_0_0 memgen_iram
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,bram_ctrl_iram_BRAM_PORTA_ADDR}),
-        .addrb(rv_pl_ip_0_i_addrb),
+        .addrb(rv_sc_ip_0_i_addrb),
         .clka(Net),
-        .clkb(rv_pl_ip_0_i_clkb),
+        .clkb(rv_sc_ip_0_i_clkb),
         .dina(bram_ctrl_iram_BRAM_PORTA_DIN),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
+        .dinb(rv_sc_ip_0_i_dinb),
         .douta(bram_ctrl_iram_BRAM_PORTA_DOUT),
         .doutb(memgen_iram_doutb),
         .ena(bram_ctrl_iram_BRAM_PORTA_EN),
-        .enb(rv_pl_ip_0_i_enb),
+        .enb(rv_sc_ip_0_i_enb),
         .rsta(bram_ctrl_iram_BRAM_PORTA_RST),
         .rstb(1'b0),
         .wea(bram_ctrl_iram_BRAM_PORTA_WE),
-        .web({1'b0,1'b0,1'b0,1'b0}));
+        .web(rv_sc_ip_0_i_web));
   ip_integrator_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -426,18 +428,20 @@ module ip_integrator
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb));
-  ip_integrator_rv_pl_ip_0_0 rv_pl_ip_0
+  ip_integrator_rv_sc_ip_0_0 rv_sc_ip_0
        (.clk(Net),
-        .d_addrb(rv_pl_ip_0_d_addrb),
-        .d_clkb(rv_pl_ip_0_d_clkb),
-        .d_dinb(rv_pl_ip_0_d_dinb),
+        .d_addrb(rv_sc_ip_0_d_addrb),
+        .d_clkb(rv_sc_ip_0_d_clkb),
+        .d_dinb(rv_sc_ip_0_d_dinb),
         .d_doutb(memgen_dram_doutb),
-        .d_enb(rv_pl_ip_0_d_enb),
-        .d_web(rv_pl_ip_0_d_web),
-        .i_addrb(rv_pl_ip_0_i_addrb),
-        .i_clkb(rv_pl_ip_0_i_clkb),
+        .d_enb(rv_sc_ip_0_d_enb),
+        .d_web(rv_sc_ip_0_d_web),
+        .i_addrb(rv_sc_ip_0_i_addrb),
+        .i_clkb(rv_sc_ip_0_i_clkb),
+        .i_dinb(rv_sc_ip_0_i_dinb),
         .i_doutb(memgen_iram_doutb),
-        .i_enb(rv_pl_ip_0_i_enb),
+        .i_enb(rv_sc_ip_0_i_enb),
+        .i_web(rv_sc_ip_0_i_web),
         .resetn(axi_gpio_0_gpio_io_o));
   ip_integrator_smartconnect_0_0 smartconnect_0
        (.M00_AXI_araddr(smartconnect_0_M00_AXI_ARADDR),

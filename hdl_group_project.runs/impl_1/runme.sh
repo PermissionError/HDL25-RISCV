@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.runs/impl_1'
+HD_PWD='C:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log ip_integrator_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ip_integrator_wrapper.tcl -notrace
 
 

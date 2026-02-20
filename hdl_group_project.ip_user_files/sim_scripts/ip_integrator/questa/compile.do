@@ -192,8 +192,8 @@ vcom -work xil_defaultlib  -93 \
 "../../../bd/ip_integrator/ip/ip_integrator_proc_sys_reset_0_0/sim/ip_integrator_proc_sys_reset_0_0.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../hdl_group_project.gen/sources_1/bd/ip_integrator/ipshared/ec67/hdl" "+incdir+../../../../hdl_group_project.gen/sources_1/bd/ip_integrator/ipshared/3007/hdl" "+incdir+../../../../hdl_group_project.gen/sources_1/bd/ip_integrator/ipshared/f0b6/hdl/verilog" "+incdir+../../../../hdl_group_project.gen/sources_1/bd/ip_integrator/ipshared/66be/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/ip_integrator/ipshared/4897/rv-pl.v" \
-"../../../bd/ip_integrator/ip/ip_integrator_rv_pl_ip_0_0/sim/ip_integrator_rv_pl_ip_0_0.v" \
+"../../../bd/ip_integrator/ipshared/26dc/rv-sc-ip.v" \
+"../../../bd/ip_integrator/ip/ip_integrator_rv_sc_ip_0_0/sim/ip_integrator_rv_sc_ip_0_0.v" \
 "../../../bd/ip_integrator/sim/ip_integrator.v" \
 
 vlog -work xil_defaultlib \

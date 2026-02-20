@@ -155,8 +155,8 @@
   "../../../bd/ip_integrator/ip/ip_integrator_proc_sys_reset_0_0/sim/ip_integrator_proc_sys_reset_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/ip_integrator/ipshared/4897/rv-pl.v" \
-  "../../../bd/ip_integrator/ip/ip_integrator_rv_pl_ip_0_0/sim/ip_integrator_rv_pl_ip_0_0.v" \
+  "../../../bd/ip_integrator/ipshared/26dc/rv-sc-ip.v" \
+  "../../../bd/ip_integrator/ip/ip_integrator_rv_sc_ip_0_0/sim/ip_integrator_rv_sc_ip_0_0.v" \
   "../../../bd/ip_integrator/sim/ip_integrator.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

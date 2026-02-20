@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>user</spirit:library>
-  <spirit:name>rv_pl_ip</spirit:name>
+  <spirit:name>rv_sc_ip</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -57,14 +57,14 @@
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>rv_pl_ip</spirit:modelName>
+        <spirit:modelName>rv_sc_ip</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c8d4e283</spirit:value>
+            <spirit:value>8a04bf3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -73,14 +73,14 @@
         <spirit:displayName>Simulation</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>rv_pl_ip</spirit:modelName>
+        <spirit:modelName>rv_sc_ip</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c8d4e283</spirit:value>
+            <spirit:value>8a04bf3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -95,6 +95,21 @@
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
             <spirit:value>3f726323</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>tb_rv_sc</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f7a99459</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -334,29 +349,39 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>rv-pl.v</spirit:name>
+        <spirit:name>rv-sc-ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_c8d4e283</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_8a04bf3e</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>rv-pl.v</spirit:name>
+        <spirit:name>rv-sc-ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/rv_pl_ip_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/rv_sc_ip_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_3f726323</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../tb-rv-sc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>rv_pl_ip_v1_0</spirit:description>
+  <spirit:description>rv_sc_ip_v1_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>ADDR_WIDTH</spirit:name>
@@ -365,7 +390,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">rv_pl_ip_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">rv_sc_ip_v1_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -390,38 +415,42 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>rv_pl_ip_v1_0</xilinx:displayName>
+      <xilinx:displayName>rv_sc_ip_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:xpmLibraries>
-        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
-        <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
-        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
-      </xilinx:xpmLibraries>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-02-20T05:34:23Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-02-20T21:16:56Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@73dd85bb_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@75dd2fec_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@63082c0b_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@56168632_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@69990054_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@4cf1decb_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@b30a2e6_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@5d3c7152_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@4a00a528_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@2bccef80_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@1089ab31_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.df@5bfa6c3f_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b2a21a9_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a9b5818_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1078a703_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@255ec676_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@603a33b2_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@797342d3_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b8f9690_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c8ae51a_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c61bbc8_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a449331_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b40c53f_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51f32933_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53e16f18_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e81ee3a_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7addb69f_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54cce184_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2884850c_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7360851b_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77cc842b_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78f749be_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34e449f7_ARCHIVE_LOCATION">c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="231a442f"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="03ef64af"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8b3a2fa6"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="7332cd2c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="07aa8ccc"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="92b4b77e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d488e08e"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

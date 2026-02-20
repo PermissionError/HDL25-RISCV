@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.runs/synth_1/ip_integrator_wrapper.tcl"
+  variable script "C:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.runs/synth_1/ip_integrator_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -77,60 +78,60 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.cache/wt [current_project]
-set_property parent.project_path C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.cache/wt [current_project]
+set_property parent.project_path C:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths c:/Users/tbnrs/Documents/Development/hdl_group_project/custom_ip [current_project]
+set_property ip_repo_paths c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/custom_ip [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.cache/ip [current_project]
+set_property ip_output_repo c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/hdl/ip_integrator_wrapper.v
-add_files C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.srcs/sources_1/bd/ip_integrator/ip_integrator.bd
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_processing_system7_0_0/ip_integrator_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_1/bd_d914_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_1/bd_d914_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_2/bd_d914_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_3/bd_d914_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_4/bd_d914_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_5/bd_d914_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_6/bd_d914_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_10/bd_d914_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_11/bd_d914_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_12/bd_d914_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_13/bd_d914_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_14/bd_d914_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_15/bd_d914_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_16/bd_d914_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_17/bd_d914_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_18/bd_d914_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_19/bd_d914_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_20/bd_d914_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_21/bd_d914_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_23/bd_d914_m01s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_24/bd_d914_m01arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_25/bd_d914_m01rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_26/bd_d914_m01awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_27/bd_d914_m01wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_28/bd_d914_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_30/bd_d914_m02s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_31/bd_d914_m02arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_32/bd_d914_m02rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_33/bd_d914_m02awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_34/bd_d914_m02wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_35/bd_d914_m02bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_blk_mem_gen_0_0/ip_integrator_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_blk_mem_gen_0_1/ip_integrator_blk_mem_gen_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_axi_gpio_0_0/ip_integrator_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_axi_gpio_0_0/ip_integrator_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_axi_gpio_0_0/ip_integrator_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_proc_sys_reset_0_0/ip_integrator_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_proc_sys_reset_0_0/ip_integrator_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.gen/sources_1/bd/ip_integrator/ip_integrator_ooc.xdc]
+read_verilog -library xil_defaultlib C:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/hdl/ip_integrator_wrapper.v
+add_files C:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.srcs/sources_1/bd/ip_integrator/ip_integrator.bd
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_processing_system7_0_0/ip_integrator_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_1/bd_d914_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_1/bd_d914_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_2/bd_d914_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_3/bd_d914_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_4/bd_d914_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_5/bd_d914_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_6/bd_d914_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_10/bd_d914_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_11/bd_d914_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_12/bd_d914_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_13/bd_d914_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_14/bd_d914_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_15/bd_d914_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_16/bd_d914_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_17/bd_d914_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_18/bd_d914_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_19/bd_d914_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_20/bd_d914_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_21/bd_d914_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_23/bd_d914_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_24/bd_d914_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_25/bd_d914_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_26/bd_d914_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_27/bd_d914_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_28/bd_d914_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_30/bd_d914_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_31/bd_d914_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_32/bd_d914_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_33/bd_d914_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_34/bd_d914_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/bd_0/ip/ip_35/bd_d914_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_blk_mem_gen_0_0/ip_integrator_blk_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_blk_mem_gen_0_1/ip_integrator_blk_mem_gen_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_axi_gpio_0_0/ip_integrator_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_axi_gpio_0_0/ip_integrator_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_axi_gpio_0_0/ip_integrator_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_proc_sys_reset_0_0/ip_integrator_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip/ip_integrator_proc_sys_reset_0_0/ip_integrator_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/tbnrs/Documents/Development/hdl_group_project_sc/hdl_group_project.gen/sources_1/bd/ip_integrator/ip_integrator_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
