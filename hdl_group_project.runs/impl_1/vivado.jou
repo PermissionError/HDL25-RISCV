@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 20 18:44:28 2026
+# Process ID: 52732
+# Current directory: C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.runs/impl_1
+# Command line: vivado.exe -log ip_integrator_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ip_integrator_wrapper.tcl -notrace
+# Log file: C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.runs/impl_1/ip_integrator_wrapper.vdi
+# Journal file: C:/Users/tbnrs/Documents/Development/hdl_group_project/hdl_group_project.runs/impl_1\vivado.jou
+# Running On: Rays-PC, OS: Windows, CPU Frequency: 4700 MHz, CPU Physical cores: 12, Host memory: 33397 MB
+#-----------------------------------------------------------
+source ip_integrator_wrapper.tcl -notrace

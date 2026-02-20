@@ -1,0 +1,17 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE memgen_dram_8K_2_MEM_DEVICE [0x00002000] 32;
+DEFINE_MEMORY_TYPE memgen_iram_8K_2_MEM_DEVICE [0x00002000] 32;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE memgen_dram_8K_2_ADDR_SPACE memgen_dram_8K_2_MEM_DEVICE  [0x40000000:0x40001FFF] bram_ctrl_dram
+     BUS_BLOCK
+      memgen_dram_8K_2_BUS_BLK [31:0] INPUT = "ip_integrator_blk_mem_gen_0_1.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE memgen_iram_8K_2_ADDR_SPACE memgen_iram_8K_2_MEM_DEVICE  [0x42000000:0x42001FFF] bram_ctrl_iram
+     BUS_BLOCK
+      memgen_iram_8K_2_BUS_BLK [31:0] INPUT = "ip_integrator_blk_mem_gen_0_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

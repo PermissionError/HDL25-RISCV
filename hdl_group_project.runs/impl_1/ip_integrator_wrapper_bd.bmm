@@ -1,0 +1,44 @@
+// BMM LOC annotation file.
+//
+// SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+// Vivado v2021.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'ip_integrator_i_processing_system7_0', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP ip_integrator_i_processing_system7_0 ARM 100 ip_integrator_i/processing_system7_0
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ip_integrator_i_processing_system7_0' address space 'ip_integrator_i_bram_ctrl_dram' 0X0000000040000000:0X0000000040001FFF (8 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE ip_integrator_i_bram_ctrl_dram RAMB32 [0X0000000040000000:0X0000000040001FFF] ip_integrator_i/bram_ctrl_dram
+        BUS_BLOCK
+            ip_integrator_i/memgen_dram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram RAMB32 [31:16] [0:2047] PLACED = X3Y11;
+            ip_integrator_i/memgen_dram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram RAMB32 [15:0] [0:2047] PLACED = X3Y10;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ip_integrator_i_processing_system7_0' address space 'ip_integrator_i_bram_ctrl_iram' 0X0000000042000000:0X0000000042001FFF (8 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE ip_integrator_i_bram_ctrl_iram RAMB32 [0X0000000042000000:0X0000000042001FFF] ip_integrator_i/bram_ctrl_iram
+        BUS_BLOCK
+            ip_integrator_i/memgen_iram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram RAMB32 [31:16] [0:2047] PLACED = X2Y15;
+            ip_integrator_i/memgen_iram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram RAMB32 [15:0] [0:2047] PLACED = X2Y14;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+
